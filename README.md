@@ -67,17 +67,6 @@ Heuristic Score| Risk Level| Recommended Response
 
 Important: These are project-defined scoring thresholds, not calibrated probabilities. The score indicates how many configured warning signs were detected; it does not measure the true likelihood of phishing.
 
-🖥️ Demo Screenshots
-
-<p align="center">
-  <em>Real screenshots from the application will be displayed here.</em>
-</p>Application Analysis
-
-"Phishing Email Identifier Demo" (screenshots/phishing_detector_demo.png)
-
-Automated Test Results
-
-"Python Unit Test Results" (screenshots/unit_tests.png)
 
 🛠️ Built With
 
