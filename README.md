@@ -1,185 +1,151 @@
 🛡️ Phishing Email Identifier
 
-Detect the warning signs. Understand the risk. Stay cyber-aware.
-
 <p align="center">
-  <img src="https://img.shields.io/badge/PYTHON-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3">
-  <img src="https://img.shields.io/badge/DOMAIN-CYBERSECURITY-163A70?style=for-the-badge&logo=shield&logoColor=white" alt="Cybersecurity">
-  <img src="https://img.shields.io/badge/ANALYSIS-RULE--BASED-8A9BB5?style=for-the-badge" alt="Rule based analysis">
-  <img src="https://img.shields.io/badge/TESTS-UNITTEST-5B8DEF?style=for-the-badge" alt="Unit tests">
+  <img src="https://img.shields.io/badge/Cybersecurity-Email%20Security-0A192F?style=for-the-badge&logo=protonmail&logoColor=white" alt="Cybersecurity"/>
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Detection-Rule--Based-64748B?style=for-the-badge" alt="Rule-based detection"/>
+  <img src="https://img.shields.io/badge/Tests-10%20Passing-16A34A?style=for-the-badge" alt="Tests"/>
 </p><p align="center">
-  <strong>A Python-powered educational tool for identifying common phishing indicators in email messages.</strong>
+  <b>A beginner-friendly defensive security tool that analyzes suspicious email text using rule-based checks and highlights potential phishing indicators.</b>
 </p>---
 
-⚡ Project Overview
+🎯 Overview
 
-Phishing attacks use deceptive emails to trick people into clicking unsafe links, revealing sensitive information, or taking actions that compromise their security.
+Phishing is a social-engineering technique in which attackers impersonate trusted organizations or individuals to trick recipients into revealing information, clicking suspicious links, or taking unsafe actions.
 
-Phishing Email Identifier analyses user-provided email text using configurable detection rules. It identifies selected warning signs, calculates a heuristic risk score, and generates a readable report with safety recommendations.
+Phishing Email Identifier examines email text for selected warning signs and produces a simple risk assessment to help users investigate suspicious messages.
 
-«Built to practise Python programming, cybersecurity fundamentals, rule-based detection, and automated testing.»
+The project demonstrates how Python can be used to build a small, testable cybersecurity utility.
 
-🎯 Core Features
+«Important: This is a rule-based educational detector, not a machine-learning model or a substitute for professional email-security systems.»
+
+✨ Key Features
 
 Feature| Description
-🔍 Email Analysis| Inspects the sender's basic address format, subject, and body
-🚨 Phrase Detection| Looks for selected urgency, sensitive-information, and reward phrases
-🔗 URL Inspection| Extracts URLs and checks selected suspicious patterns
-📊 Risk Assessment| Produces a heuristic score from 0 to 100
-🛡️ Risk Classification| Categorises results as Low, Medium, or High
-📝 Analysis Report| Displays detected indicators and safety recommendations
-🧪 Automated Testing| Uses Python's built-in "unittest" framework
-📋 Security Checklist| Includes a reusable manual phishing-review checklist
+🔎 Email text analysis| Examines supplied email text for configured warning signs
+🚩 Suspicious indicators| Identifies patterns covered by the detection rules
+📊 Risk assessment| Produces a result based on the implemented rules
+🧪 Automated testing| Includes unit tests for expected detector behaviour
+🧩 Modular Python code| Separates detection logic from test cases
+📖 Security awareness| Encourages careful inspection of suspicious messages
 
-🧠 How It Works
+⚙️ How It Works
 
-       ┌─────────────────────────┐
-       │   EMAIL INPUT           │
-       │ Sender • Subject • Body │
-       └────────────┬────────────┘
-                    ▼
-       ┌─────────────────────────┐
-       │   TEXT ANALYSIS         │
-       │ Phrase and sender rules │
-       └────────────┬────────────┘
-                    ▼
-       ┌─────────────────────────┐
-       │   URL INSPECTION        │
-       │ Extract and inspect URLs│
-       └────────────┬────────────┘
-                    ▼
-       ┌─────────────────────────┐
-       │   RISK ASSESSMENT       │
-       │ Score + detected clues  │
-       └────────────┬────────────┘
-                    ▼
-       ┌─────────────────────────┐
-       │   ANALYSIS REPORT       │
-       │ Risk + recommendations │
-       └─────────────────────────┘
+        ┌──────────────────────┐
+        │   Email Text Input   │
+        └──────────┬───────────┘
+                   │
+                   ▼
+        ┌──────────────────────┐
+        │  Rule-Based Analysis │
+        └──────────┬───────────┘
+                   │
+                   ▼
+        ┌──────────────────────┐
+        │ Check Warning Signs  │
+        └──────────┬───────────┘
+                   │
+                   ▼
+        ┌──────────────────────┐
+        │ Display Assessment   │
+        └──────────────────────┘
 
-📊 Risk Classification
+The detector evaluates the input using the rules implemented in the source code. Its result is an indicator for further review, not proof that an email is malicious or safe.
 
-Heuristic Score| Risk Level| Recommended Response
-0–29| 🟢 Low| Remain cautious; a low score does not prove safety
-30–59| 🟡 Medium| Investigate the warning signs and verify independently
-60–100| 🔴 High| Treat the message as suspicious and avoid interacting with it
+🧰 Tech Stack
 
-Important: These are project-defined scoring thresholds, not calibrated probabilities. The score indicates how many configured warning signs were detected; it does not measure the true likelihood of phishing.
+- Language: Python 3
+- Testing: Python "unittest"
+- Concepts: Text analysis, conditional logic, functions, rule-based detection
+- Development: Visual Studio Code / terminal
+- Version control: Git and GitHub
 
+📂 Project Structure
 
-🛠️ Built With
+Phishing_email_identifier/
+├── phishing_detector.py
+├── test_phishing_detector.py
+├── README.md
+├── PHISHING_CHECKLIST.md
+├── PROJECT_REPORT.md
+└── screenshots/
+    ├── detector-output.png
+    └── test-results.png
 
-Technology| Purpose
-Python 3| Main programming language
-"re"| Pattern matching and URL extraction
-"urllib.parse"| Parsing URL components
-"unittest"| Automated testing
-Visual Studio Code| Development environment
-Git & GitHub| Version control and project hosting
+The screenshot filenames above are examples. Keep the names in this section aligned with the files actually present in your repository.
 
 🚀 Getting Started
 
-Prerequisites
-
-- Python 3 installed
-- Git installed (for cloning the repository)
-- A terminal or Visual Studio Code
-
 1. Clone the repository
 
-git clone https://github.com/HARSHA-TKD/Phishing_Email_Identifier.git
-cd Phishing_Email_Identifier
+git clone https://github.com/HARSHA-TKD/Phishing_email_identifier.git
+cd Phishing_email_identifier
 
-2. Run the application
+2. Check Python
 
-python phishing_detector.py
+python3 --version
 
-On Windows, you can also use:
+Python 3 is required.
 
-py phishing_detector.py
+3. Run the detector
 
-Enter a sender address, subject, and email body when prompted. Press Enter on an empty line to finish entering the body.
+python3 phishing_detector.py
 
-3. Run automated tests
+Follow the prompts shown by the program, if applicable.
 
-python -m unittest -v
+4. Run automated tests
 
-The test suite covers phrase detection, URL handling, invalid sender formats, score limits, and other input cases.
+python3 -m unittest -v test_phishing_detector.py
 
-🧪 Example Analysis
+The project includes ten automated test cases for the implemented detection behaviour.
 
-Use this fictional example to demonstrate the tool:
+🧪 Testing
 
-Sender: "security@example.com"
+The unit tests are intended to validate the detector's behaviour on defined examples.
 
-Subject: "Urgent action required"
+Coverage includes the scenarios implemented in the test suite, such as suspicious-message indicators and expected assessment results.
 
-Body:
+Run the tests locally before submitting changes. Test success demonstrates that the tested cases behave as expected; it does not establish perfect phishing detection.
 
-Your account will be closed within 24 hours.
-Verify your account and password immediately.
-Visit http://192.0.2.10/login
+🛡️ Phishing Safety Checklist
 
-The application should identify matching configured warning signs and display a risk assessment.
+When reviewing a suspicious email:
 
-"192.0.2.10" is a documentation-only example address. Do not visit the example URL.
+- Verify the sender's address carefully.
+- Be cautious of unexpected urgency or threats.
+- Avoid opening unexpected attachments.
+- Inspect links without signing in or entering personal information.
+- Confirm payment requests or account alerts through official channels.
+- Never share passwords or one-time verification codes in response to suspicious messages.
 
-📁 Project Structure
+See ""PHISHING_CHECKLIST.md"" (PHISHING_CHECKLIST.md) for the project's checklist.
 
-Phishing_Email_Identifier/
-│
-├── phishing_detector.py
-├── test_phishing_detector.py
-├── PHISHING_CHECKLIST.md
-├── PROJECT_REPORT.md
-├── README.md
-├── .gitignore
-│
-└── screenshots/
-    ├── phishing_detector_demo.png
-    └── unit_tests.png
+⚠️ Limitations
 
-🔐 Privacy, Security & Limitations
-
-- The program analyses the text supplied by the user locally.
-- It does not open URLs or send email content to external services.
-- Sender-format validation does not authenticate the sender.
-- URL-pattern checks cannot prove that a website is malicious.
-- Keyword matching can flag legitimate emails and miss sophisticated attacks.
-- The tool does not perform live domain-reputation checks or machine-learning classification.
-- A low-risk result does not guarantee that a message is safe.
-
-Safety advice: Never provide passwords or OTPs in response to unexpected email requests. Verify sensitive requests through an independently obtained, trusted contact method.
-
-📚 Project Documentation
-
-- 📋 "Phishing Detection Checklist" (PHISHING_CHECKLIST.md)
-- 📄 "Project Report" (PROJECT_REPORT.md)
+- Detection depends on the rules implemented in the program.
+- New or cleverly disguised phishing messages may not trigger existing rules.
+- Legitimate messages may contain suspicious-looking wording.
+- The tool does not independently verify sender identity or website reputation unless such functionality is explicitly implemented.
+- A result should not be treated as a definitive security verdict.
 
 🔮 Future Improvements
 
-- Domain allowlists and configurable detection rules
-- More robust email-address and URL validation
-- Structured JSON report export
-- Additional unit tests and test coverage reporting
-- Optional integration with trusted threat-intelligence sources
-- Improved handling of internationalized domains and lookalike-domain warnings
+- Add URL parsing and safer URL feature extraction.
+- Support structured email files such as ".eml".
+- Improve explainability by listing the triggered rules.
+- Add more unit tests for edge cases.
+- Explore reputation feeds or machine-learning approaches in a controlled, privacy-conscious design.
 
-Any future URL reputation integration should be designed with privacy, safe request handling, and API-key protection in mind.
+These are possible future enhancements, not claims about current functionality.
 
 👨‍💻 Author
 
-Harsha Vardhan V G
+HARSHA VARDHAN V G
 
-Cybersecurity Learner | Python Developer
+Cybersecurity Learner | Python Developer | CSE (Cybersecurity)
 
-Project: CodeOrbit Cybersecurity Internship — Project 3
+Program: CodeOrbit Internship — Project 3
 
----
+📜 Disclaimer
 
-<p align="center">
-  <strong>Learn. Analyse. Verify. Stay Secure. 🔐</strong>
-</p><p align="center">
-  <sub>Educational project for cybersecurity awareness. Not a replacement for professional email-security solutions.</sub>
-</p>
+This project is developed for educational and defensive-security purposes. Use it to learn about phishing awareness and rule-based text analysis. Do not use it as the sole basis for security decisions.
